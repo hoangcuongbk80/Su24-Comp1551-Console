@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Comp1551_SU24
-build_property.ProjectDir = D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Comp1551-SU24\
+build_property.ProjectDir = D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\Comp1551-SU24\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

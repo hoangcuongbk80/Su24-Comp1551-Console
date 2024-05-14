@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Comp1551-SU24\\Comp1551-SU24.csproj": {}
+    "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Su24-Comp1551-Console\\Comp1551-SU24\\Comp1551-SU24.csproj": {}
   },
   "projects": {
-    "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Comp1551-SU24\\Comp1551-SU24.csproj": {
+    "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Su24-Comp1551-Console\\Comp1551-SU24\\Comp1551-SU24.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Comp1551-SU24\\Comp1551-SU24.csproj",
+        "projectUniqueName": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Su24-Comp1551-Console\\Comp1551-SU24\\Comp1551-SU24.csproj",
         "projectName": "Comp1551-SU24",
-        "projectPath": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Comp1551-SU24\\Comp1551-SU24.csproj",
+        "projectPath": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Su24-Comp1551-Console\\Comp1551-SU24\\Comp1551-SU24.csproj",
         "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-        "outputPath": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Comp1551-SU24\\obj\\",
+        "outputPath": "D:\\FGW\\Courses\\COMP1551-ApplicationDevelopment\\Su24-CO1103\\code\\Su24-Comp1551-Console\\Comp1551-SU24\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",

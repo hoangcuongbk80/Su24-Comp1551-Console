@@ -14,7 +14,7 @@
         {
             Console.WriteLine("Hello, CO1103!");
             printHello();
-            printHello("Cuong");
+            printHello("Cuong1");
         }
     }
 }
