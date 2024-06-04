@@ -9,7 +9,6 @@
             set { if((value>0) && (value<13)) { month = value; }}
         }
     }
-
     class QuadraticEquation
     {
         private double a;
@@ -27,7 +26,6 @@
             get { return x2; }
             set { x2 = value; }
         }
-
         public void Calculate(double p1, double p2, double p3)
         {
             a = p1; b = p2; c = p3;
@@ -44,6 +42,91 @@
             }
         }
     }
+    class Vehicle
+    {
+        public string name;
+        public int price;
+        public Vehicle() 
+        {
+            Console.WriteLine("This is a vehicle");
+        }
+        public void Say()
+        {
+            Console.WriteLine("Vehicle");
+        }
+    }
+    class Car : Vehicle 
+    {
+        public Car()
+        {
+            Console.WriteLine("This is a car");
+        }
+        public new void Say()
+        {
+            Console.WriteLine("Car");
+        }
+    }
+    class Toyota : Car
+    {
+        public Toyota() 
+        {
+            Console.WriteLine("This is  Toyota");
+        }
+        public new void Say()
+        {
+            Console.WriteLine("Toyota");
+        }
+    }
+    class Prius : Toyota
+    {
+        public Prius()
+        {
+            Console.WriteLine("This is Prius");
+        }
+        public new void Say()
+        {
+            Console.WriteLine("Prius");
+        }
+    }
+    class MyClass
+    {
+        public void Call(int p)
+        {
+            Console.WriteLine("This is an integer: {0}", p);
+        }
+        public void Call(double p)
+        {
+            Console.WriteLine("This is an integer: {0}", p);
+        }
+        public void Call(char p)
+        {
+            Console.WriteLine("This is an integer: {0}", p);
+        }
+        public void Call(string p)
+        {
+            Console.WriteLine("This is an integer: {0}", p);
+        }
+    }
+
+    abstract class Animal
+    {
+        public abstract void makeSound();
+    }
+
+    class Cat : Animal
+    {
+        public override void makeSound()
+        {
+            Console.WriteLine("Meo meo");
+        }
+    }
+    class Dog : Animal
+    {
+        public override void makeSound()
+        {
+            Console.WriteLine("Gow Gow");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -57,7 +140,7 @@
             S= Convert.ToString(Months.GetMonthName(a.Month));
             Console.WriteLine("The month is: {0}", S);*/
 
-            QuadraticEquation quadraticEquation = new QuadraticEquation();
+            /*QuadraticEquation quadraticEquation = new QuadraticEquation();
             quadraticEquation.Calculate(27,4,-5);
             if (quadraticEquation.X1 != null)
             {
@@ -66,9 +149,23 @@
             else
             {
                 Console.WriteLine("Result: null");
-            }
+            }*/
 
+            /*Car myCar = new Car();
+            myCar.Say();
+            myCar.name = "Vious";
+            myCar.price = 30000;*/
 
+            /*MyClass myClass = new MyClass();
+            myClass.Call(6);
+            myClass.Call(6.6);
+            myClass.Call('A');
+            myClass.Call("Hello");*/
+
+            /*Cat myCat = new Cat();
+            myCat.makeSound();
+            Dog myDog = new Dog();
+            myDog.makeSound();*/
         }
     }
 }
