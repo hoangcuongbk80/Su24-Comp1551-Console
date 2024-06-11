@@ -1,8 +1,30 @@
-﻿namespace Lecture5
+﻿using System.Data;
+
+namespace Lecture5
 {
-    
-    internal class Program
+    class Person
     {
+        private string firstName = "";
+        private string lastName = "";
+        public string GetFirstName()
+        {
+            return this.firstName;
+        }
+        public string GetLasttName()
+        {
+            return this.lastName;
+        }
+        public void SetFirstName(string firstName)
+        {
+            this.firstName = firstName;
+        }
+        public void SetLastName(string lastName) 
+        {
+            this.lastName = lastName;
+        }
+    }
+    internal class Program
+    {       
         public enum Seasons
         {
             Spring,
@@ -44,6 +66,23 @@
         }
         static void Main(string[] args)
         {
+            /*Person[] people = new Person[10];
+            for (int i = 0; i < people.Length; i++)
+            {
+                people[i] = new Person();
+            }
+
+            people[0].SetFirstName("An");
+            people[1].SetFirstName("Linh");
+            people[2].SetFirstName("Thuy");
+
+            foreach(Person p in people)
+            {
+                Console.WriteLine(p.GetFirstName());
+            }*/
+
+
+
             /*Console.WriteLine("-----------Lecture 5-----------");
             Seasons currentSeason = Seasons.Summer;
             Console.WriteLine("Current season: {0}", currentSeason);
@@ -81,6 +120,60 @@
             double x = 0.5, y = 1.5;
             double z = Addition<double>(x, y);
             Console.WriteLine("x+y={0}", z);*/
+
+            /*List<Person> MyList = new List<Person>();
+            Person p1 = new Person();
+            p1.SetFirstName("Anh");
+            MyList.Add(p1);
+
+            Person p2 = new Person();
+            p2.SetFirstName("Hoa");
+            MyList.Add(p2);
+
+            Person p3 = new Person();
+            p3.SetFirstName("Lan");
+            MyList.Add(p3);
+
+            MyList.RemoveAt(1);
+            MyList.Insert(1, p2);
+
+            foreach (Person p in MyList)
+            {
+                Console.WriteLine(p.GetFirstName());
+            }*/
+
+            DateTime a = new DateTime();
+            Console.WriteLine(a.ToLongDateString());
+
+            DateTime b = new DateTime(1945, 9, 2);
+            Console.WriteLine(b.ToLongDateString());
+            
+            DateTime c = new DateTime(1945, 9, 2, 9, 10, 0);
+            Console.WriteLine(c.ToLongTimeString());
+
+            DateTime today = DateTime.Today;
+            Console.WriteLine(today.ToLongDateString());
+
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now.ToLongTimeString());
+
+            DateTime specificDate = new DateTime(2024, 6, 10, 15, 30, 0);
+
+            // Adding or subtracting time intervals
+            DateTime futureDate = specificDate.AddYears(1).AddMonths(2).AddDays(3);
+            Console.WriteLine("Future Date: " + futureDate);
+
+            DateTime pastDate = specificDate.AddYears(-1).AddMonths(-2).AddDays(-3);
+            Console.WriteLine("Past Date: " + pastDate);
+
+            // Formatting a DateTime object as a string
+            string formattedDate = specificDate.ToString("yyyy-MM-dd HH:mm:ss");
+            Console.WriteLine("Formatted Date: " + formattedDate);
+
+            // Parsing a string into a DateTime object
+            string dateString = "2024-12-25 08:00:00";
+            DateTime parsedDate = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", null);
+            Console.WriteLine("Parsed Date: " + parsedDate);
         }
     }
 }
