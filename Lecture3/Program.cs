@@ -149,8 +149,6 @@
 
         static void RunStudentApp()
         {
-            Console.WriteLine("------------Lecture 16--------------");
-
             Console.Write("Enter number of students: ");
             var n = int.Parse(Console.ReadLine());
             var students = new List<Student>();
