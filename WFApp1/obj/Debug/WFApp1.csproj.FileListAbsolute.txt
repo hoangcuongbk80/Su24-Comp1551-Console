@@ -1,0 +1,10 @@
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\bin\Debug\WFApp1.exe.config
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\bin\Debug\WFApp1.exe
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\bin\Debug\WFApp1.pdb
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.csproj.AssemblyReference.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.Form1.resources
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.Properties.Resources.resources
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.csproj.GenerateResource.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.csproj.CoreCompileInputs.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.exe
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WFApp1\obj\Debug\WFApp1.pdb

@@ -1,0 +1,10 @@
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources

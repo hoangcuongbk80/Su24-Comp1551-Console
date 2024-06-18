@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture3", "..\Lecture3\Lec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture4", "..\Lecture4\Lecture4.csproj", "{EA6308F9-83CC-4145-A2AF-4887B631E700}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture5", "..\Lecture5\Lecture5.csproj", "{A361AAA8-2CE1-4382-92A0-0DDE12BCF02F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture5", "..\Lecture5\Lecture5.csproj", "{A361AAA8-2CE1-4382-92A0-0DDE12BCF02F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFApp1", "..\WFApp1\WFApp1.csproj", "{B2F251F9-CE26-4B30-9EB1-DD92F4344AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "..\WindowsFormsApp1\WindowsFormsApp1.csproj", "{FA993A88-F84F-42B4-87A8-F578BF8C91AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{A361AAA8-2CE1-4382-92A0-0DDE12BCF02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A361AAA8-2CE1-4382-92A0-0DDE12BCF02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A361AAA8-2CE1-4382-92A0-0DDE12BCF02F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F251F9-CE26-4B30-9EB1-DD92F4344AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F251F9-CE26-4B30-9EB1-DD92F4344AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F251F9-CE26-4B30-9EB1-DD92F4344AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F251F9-CE26-4B30-9EB1-DD92F4344AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA993A88-F84F-42B4-87A8-F578BF8C91AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA993A88-F84F-42B4-87A8-F578BF8C91AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA993A88-F84F-42B4-87A8-F578BF8C91AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA993A88-F84F-42B4-87A8-F578BF8C91AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
