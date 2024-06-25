@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WFApp1
+namespace WindowsFormsApp2
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace WFApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form_Login());
         }
     }
 }

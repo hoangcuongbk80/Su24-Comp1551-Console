@@ -32,19 +32,19 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bt_swap = new System.Windows.Forms.Button();
-            this.tb_swap_1 = new System.Windows.Forms.TextBox();
             this.tb_swap_2 = new System.Windows.Forms.TextBox();
+            this.tb_swap_1 = new System.Windows.Forms.TextBox();
+            this.bt_swap = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bt_equal = new System.Windows.Forms.Button();
+            this.cb_operator = new System.Windows.Forms.ComboBox();
+            this.tb_result = new System.Windows.Forms.TextBox();
             this.tb_second = new System.Windows.Forms.TextBox();
             this.tb_first = new System.Windows.Forms.TextBox();
-            this.tb_result = new System.Windows.Forms.TextBox();
-            this.cb_operator = new System.Windows.Forms.ComboBox();
-            this.bt_equal = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.bt_write_text = new System.Windows.Forms.Button();
-            this.bt_read_text = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.bt_read_text = new System.Windows.Forms.Button();
+            this.bt_write_text = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,6 +86,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Swap";
             // 
+            // tb_swap_2
+            // 
+            this.tb_swap_2.Location = new System.Drawing.Point(428, 73);
+            this.tb_swap_2.Name = "tb_swap_2";
+            this.tb_swap_2.Size = new System.Drawing.Size(186, 38);
+            this.tb_swap_2.TabIndex = 4;
+            // 
+            // tb_swap_1
+            // 
+            this.tb_swap_1.Location = new System.Drawing.Point(27, 73);
+            this.tb_swap_1.Name = "tb_swap_1";
+            this.tb_swap_1.Size = new System.Drawing.Size(186, 38);
+            this.tb_swap_1.TabIndex = 3;
+            // 
             // bt_swap
             // 
             this.bt_swap.BackColor = System.Drawing.Color.LimeGreen;
@@ -96,20 +110,6 @@
             this.bt_swap.Text = "Swap";
             this.bt_swap.UseVisualStyleBackColor = false;
             this.bt_swap.Click += new System.EventHandler(this.bt_swap_Click);
-            // 
-            // tb_swap_1
-            // 
-            this.tb_swap_1.Location = new System.Drawing.Point(27, 73);
-            this.tb_swap_1.Name = "tb_swap_1";
-            this.tb_swap_1.Size = new System.Drawing.Size(186, 38);
-            this.tb_swap_1.TabIndex = 3;
-            // 
-            // tb_swap_2
-            // 
-            this.tb_swap_2.Location = new System.Drawing.Point(428, 73);
-            this.tb_swap_2.Name = "tb_swap_2";
-            this.tb_swap_2.Size = new System.Drawing.Size(186, 38);
-            this.tb_swap_2.TabIndex = 4;
             // 
             // groupBox3
             // 
@@ -126,26 +126,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Calculator";
             // 
-            // tb_second
+            // bt_equal
             // 
-            this.tb_second.Location = new System.Drawing.Point(419, 73);
-            this.tb_second.Name = "tb_second";
-            this.tb_second.Size = new System.Drawing.Size(183, 38);
-            this.tb_second.TabIndex = 4;
-            // 
-            // tb_first
-            // 
-            this.tb_first.Location = new System.Drawing.Point(27, 73);
-            this.tb_first.Name = "tb_first";
-            this.tb_first.Size = new System.Drawing.Size(186, 38);
-            this.tb_first.TabIndex = 3;
-            // 
-            // tb_result
-            // 
-            this.tb_result.Location = new System.Drawing.Point(811, 73);
-            this.tb_result.Name = "tb_result";
-            this.tb_result.Size = new System.Drawing.Size(186, 38);
-            this.tb_result.TabIndex = 5;
+            this.bt_equal.Location = new System.Drawing.Point(641, 66);
+            this.bt_equal.Name = "bt_equal";
+            this.bt_equal.Size = new System.Drawing.Size(131, 51);
+            this.bt_equal.TabIndex = 7;
+            this.bt_equal.Text = "=";
+            this.bt_equal.UseVisualStyleBackColor = true;
+            this.bt_equal.Click += new System.EventHandler(this.bt_equal_Click);
             // 
             // cb_operator
             // 
@@ -161,15 +150,26 @@
             this.cb_operator.Size = new System.Drawing.Size(121, 39);
             this.cb_operator.TabIndex = 6;
             // 
-            // bt_equal
+            // tb_result
             // 
-            this.bt_equal.Location = new System.Drawing.Point(641, 66);
-            this.bt_equal.Name = "bt_equal";
-            this.bt_equal.Size = new System.Drawing.Size(131, 51);
-            this.bt_equal.TabIndex = 7;
-            this.bt_equal.Text = "=";
-            this.bt_equal.UseVisualStyleBackColor = true;
-            this.bt_equal.Click += new System.EventHandler(this.bt_equal_Click);
+            this.tb_result.Location = new System.Drawing.Point(811, 73);
+            this.tb_result.Name = "tb_result";
+            this.tb_result.Size = new System.Drawing.Size(186, 38);
+            this.tb_result.TabIndex = 5;
+            // 
+            // tb_second
+            // 
+            this.tb_second.Location = new System.Drawing.Point(419, 73);
+            this.tb_second.Name = "tb_second";
+            this.tb_second.Size = new System.Drawing.Size(183, 38);
+            this.tb_second.TabIndex = 4;
+            // 
+            // tb_first
+            // 
+            this.tb_first.Location = new System.Drawing.Point(27, 73);
+            this.tb_first.Name = "tb_first";
+            this.tb_first.Size = new System.Drawing.Size(186, 38);
+            this.tb_first.TabIndex = 3;
             // 
             // groupBox4
             // 
@@ -184,16 +184,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "File Process";
             // 
-            // bt_write_text
+            // richTextBox1
             // 
-            this.bt_write_text.BackColor = System.Drawing.Color.Turquoise;
-            this.bt_write_text.Location = new System.Drawing.Point(60, 64);
-            this.bt_write_text.Name = "bt_write_text";
-            this.bt_write_text.Size = new System.Drawing.Size(274, 51);
-            this.bt_write_text.TabIndex = 7;
-            this.bt_write_text.Text = "Write Text File";
-            this.bt_write_text.UseVisualStyleBackColor = false;
-            this.bt_write_text.Click += new System.EventHandler(this.bt_write_text_Click);
+            this.richTextBox1.Location = new System.Drawing.Point(27, 165);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(957, 331);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
             // 
             // bt_read_text
             // 
@@ -206,13 +203,16 @@
             this.bt_read_text.UseVisualStyleBackColor = false;
             this.bt_read_text.Click += new System.EventHandler(this.bt_read_text_Click);
             // 
-            // richTextBox1
+            // bt_write_text
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(27, 165);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(957, 331);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.bt_write_text.BackColor = System.Drawing.Color.Turquoise;
+            this.bt_write_text.Location = new System.Drawing.Point(60, 64);
+            this.bt_write_text.Name = "bt_write_text";
+            this.bt_write_text.Size = new System.Drawing.Size(274, 51);
+            this.bt_write_text.TabIndex = 7;
+            this.bt_write_text.Text = "Write Text File";
+            this.bt_write_text.UseVisualStyleBackColor = false;
+            this.bt_write_text.Click += new System.EventHandler(this.bt_write_text_Click);
             // 
             // Form1
             // 
