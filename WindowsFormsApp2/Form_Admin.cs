@@ -22,5 +22,11 @@ namespace WindowsFormsApp2
             string[] newrow = {tb_id.Text, tb_name.Text, tb_email.Text, tb_role.Text};
             dataGridView1.Rows.Add(newrow);
         }
+
+        private void bt_remove_Click(object sender, EventArgs e)
+        {
+            int row_index = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(row_index);
+        }
     }
 }

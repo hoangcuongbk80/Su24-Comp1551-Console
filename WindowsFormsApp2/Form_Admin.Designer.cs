@@ -42,6 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bt_add = new System.Windows.Forms.Button();
+            this.bt_remove = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,12 +168,24 @@
             this.bt_add.UseVisualStyleBackColor = false;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
+            // bt_remove
+            // 
+            this.bt_remove.BackColor = System.Drawing.Color.MediumPurple;
+            this.bt_remove.Location = new System.Drawing.Point(212, 735);
+            this.bt_remove.Name = "bt_remove";
+            this.bt_remove.Size = new System.Drawing.Size(148, 57);
+            this.bt_remove.TabIndex = 10;
+            this.bt_remove.Text = "Remove";
+            this.bt_remove.UseVisualStyleBackColor = false;
+            this.bt_remove.Click += new System.EventHandler(this.bt_remove_Click);
+            // 
             // Form_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1658, 1002);
+            this.Controls.Add(this.bt_remove);
             this.Controls.Add(this.bt_add);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,5 +220,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_add;
+        private System.Windows.Forms.Button bt_remove;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
