@@ -31,35 +31,49 @@ namespace WindowsFormsApp2
             }
             catch {}
         }
+
+        private bool check_login()
+        {
+            try
+            {
+                StreamReader reader = new StreamReader("users.txt");
+                string line = reader.ReadLine();    
+                while (line!= null) {
+                    string text = tb_user.Text + " " + tb_password.Text 
+                                    + " " + cb_role.Text;
+                    if(line == text) return true;
+                    line = reader.ReadLine();
+                }
+            }
+            catch { }
+            return false;
+        }
         private void bt_login_Click(object sender, EventArgs e)
         {
-            if(this.cb_role.Text == "Admin")
+            if(check_login())
             {
-                if(this.tb_user.Text == "admin" && tb_password.Text == "123")
+                if (this.checkBox1.Checked)
                 {
-                    if (this.checkBox1.Checked)
-                    {
-                        StreamWriter writer = new StreamWriter("login.txt");
-                        string info = tb_user.Text + " " + tb_password.Text + " " 
-                                      + cb_role.Text;
-                        writer.WriteLine(info);
-                        writer.Close();
-                        MessageBox.Show("You login with admin role successfully " +
-                                        "and the info saved to login.txt");
-                    }
-                    else
-                    {
-                        MessageBox.Show("You login with admin role successfully");
-                    }
-                    Form_Admin form_Admin = new Form_Admin();
-                    form_Admin.ShowDialog();
+                    StreamWriter writer = new StreamWriter("login.txt");
+                    string info = tb_user.Text + " " + tb_password.Text + " " 
+                                    + cb_role.Text;
+                    writer.WriteLine(info);
+                    writer.Close();
+                    MessageBox.Show("You login with admin role successfully " +
+                                    "and the info saved to login.txt");
                 }
                 else
                 {
-                    MessageBox.Show("Invalid user name of password");
+                    MessageBox.Show("You login with admin role successfully");
                 }
-                
+                Form_Admin form_Admin = new Form_Admin();
+                form_Admin.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show("Invalid user name or password");
+            }
+                
         }
     }
 }

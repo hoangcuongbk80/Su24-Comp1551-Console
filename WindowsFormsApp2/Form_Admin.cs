@@ -16,5 +16,11 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+            string[] newrow = {tb_id.Text, tb_name.Text, tb_email.Text, tb_role.Text};
+            dataGridView1.Rows.Add(newrow);
+        }
     }
 }

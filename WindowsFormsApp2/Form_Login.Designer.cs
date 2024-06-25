@@ -42,14 +42,14 @@
             // 
             // tb_user
             // 
-            this.tb_user.Location = new System.Drawing.Point(445, 339);
+            this.tb_user.Location = new System.Drawing.Point(383, 297);
             this.tb_user.Name = "tb_user";
             this.tb_user.Size = new System.Drawing.Size(317, 38);
             this.tb_user.TabIndex = 0;
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(445, 430);
+            this.tb_password.Location = new System.Drawing.Point(383, 388);
             this.tb_password.Name = "tb_password";
             this.tb_password.Size = new System.Drawing.Size(317, 38);
             this.tb_password.TabIndex = 1;
@@ -57,16 +57,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 339);
+            this.label1.Location = new System.Drawing.Point(212, 300);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 32);
+            this.label1.Size = new System.Drawing.Size(152, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "User";
+            this.label1.Text = "User Email";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(274, 436);
+            this.label2.Location = new System.Drawing.Point(212, 394);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 32);
             this.label2.TabIndex = 3;
@@ -79,7 +79,7 @@
             "Admin",
             "Student",
             "Teacher"});
-            this.cb_role.Location = new System.Drawing.Point(445, 244);
+            this.cb_role.Location = new System.Drawing.Point(383, 202);
             this.cb_role.Name = "cb_role";
             this.cb_role.Size = new System.Drawing.Size(317, 39);
             this.cb_role.TabIndex = 4;
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(316, 244);
+            this.label3.Location = new System.Drawing.Point(254, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 32);
             this.label3.TabIndex = 5;
@@ -96,9 +96,9 @@
             // bt_login
             // 
             this.bt_login.BackColor = System.Drawing.Color.SandyBrown;
-            this.bt_login.Location = new System.Drawing.Point(445, 526);
+            this.bt_login.Location = new System.Drawing.Point(383, 484);
             this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(209, 60);
+            this.bt_login.Size = new System.Drawing.Size(166, 60);
             this.bt_login.TabIndex = 6;
             this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(210, 108);
+            this.label4.Location = new System.Drawing.Point(148, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(689, 78);
             this.label4.TabIndex = 7;
@@ -118,7 +118,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(445, 642);
+            this.checkBox1.Location = new System.Drawing.Point(597, 497);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(260, 36);
             this.checkBox1.TabIndex = 8;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 726);
+            this.ClientSize = new System.Drawing.Size(1039, 616);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bt_login);
