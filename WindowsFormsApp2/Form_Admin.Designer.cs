@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_email = new System.Windows.Forms.TextBox();
@@ -44,6 +40,15 @@
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_remove = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_Phone = new System.Windows.Forms.TextBox();
+            this.bt_save = new System.Windows.Forms.Button();
+            this.bt_load = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +62,7 @@
             this.ID,
             this.FullName,
             this.Email,
+            this.Phone,
             this.Role});
             this.dataGridView1.Location = new System.Drawing.Point(414, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -64,6 +70,130 @@
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1191, 954);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // tb_id
+            // 
+            this.tb_id.Location = new System.Drawing.Point(42, 124);
+            this.tb_id.Name = "tb_id";
+            this.tb_id.Size = new System.Drawing.Size(336, 38);
+            this.tb_id.TabIndex = 1;
+            // 
+            // tb_name
+            // 
+            this.tb_name.Location = new System.Drawing.Point(42, 229);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(336, 38);
+            this.tb_name.TabIndex = 2;
+            // 
+            // tb_email
+            // 
+            this.tb_email.Location = new System.Drawing.Point(42, 343);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(336, 38);
+            this.tb_email.TabIndex = 3;
+            // 
+            // tb_role
+            // 
+            this.tb_role.Location = new System.Drawing.Point(29, 577);
+            this.tb_role.Name = "tb_role";
+            this.tb_role.Size = new System.Drawing.Size(336, 38);
+            this.tb_role.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 32);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Full Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 308);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 32);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 530);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 32);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Role";
+            // 
+            // bt_add
+            // 
+            this.bt_add.BackColor = System.Drawing.Color.Violet;
+            this.bt_add.Location = new System.Drawing.Point(12, 676);
+            this.bt_add.Name = "bt_add";
+            this.bt_add.Size = new System.Drawing.Size(180, 57);
+            this.bt_add.TabIndex = 9;
+            this.bt_add.Text = "Add";
+            this.bt_add.UseVisualStyleBackColor = false;
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
+            // 
+            // bt_remove
+            // 
+            this.bt_remove.BackColor = System.Drawing.Color.MediumPurple;
+            this.bt_remove.Location = new System.Drawing.Point(215, 676);
+            this.bt_remove.Name = "bt_remove";
+            this.bt_remove.Size = new System.Drawing.Size(193, 57);
+            this.bt_remove.TabIndex = 10;
+            this.bt_remove.Text = "Remove";
+            this.bt_remove.UseVisualStyleBackColor = false;
+            this.bt_remove.Click += new System.EventHandler(this.bt_remove_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 425);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 32);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Phone";
+            // 
+            // tb_Phone
+            // 
+            this.tb_Phone.Location = new System.Drawing.Point(42, 460);
+            this.tb_Phone.Name = "tb_Phone";
+            this.tb_Phone.Size = new System.Drawing.Size(336, 38);
+            this.tb_Phone.TabIndex = 11;
+            // 
+            // bt_save
+            // 
+            this.bt_save.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bt_save.Location = new System.Drawing.Point(12, 767);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(180, 57);
+            this.bt_save.TabIndex = 13;
+            this.bt_save.Text = "Save File";
+            this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
+            // 
+            // bt_load
+            // 
+            this.bt_load.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bt_load.Location = new System.Drawing.Point(215, 767);
+            this.bt_load.Name = "bt_load";
+            this.bt_load.Size = new System.Drawing.Size(180, 57);
+            this.bt_load.TabIndex = 14;
+            this.bt_load.Text = "Load File";
+            this.bt_load.UseVisualStyleBackColor = false;
+            this.bt_load.Click += new System.EventHandler(this.bt_load_Click);
             // 
             // ID
             // 
@@ -86,6 +216,13 @@
             this.Email.Name = "Email";
             this.Email.Width = 140;
             // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.MinimumWidth = 12;
+            this.Phone.Name = "Phone";
+            this.Phone.Width = 151;
+            // 
             // Role
             // 
             this.Role.HeaderText = "Role";
@@ -93,98 +230,16 @@
             this.Role.Name = "Role";
             this.Role.Width = 127;
             // 
-            // tb_id
-            // 
-            this.tb_id.Location = new System.Drawing.Point(29, 194);
-            this.tb_id.Name = "tb_id";
-            this.tb_id.Size = new System.Drawing.Size(336, 38);
-            this.tb_id.TabIndex = 1;
-            // 
-            // tb_name
-            // 
-            this.tb_name.Location = new System.Drawing.Point(29, 324);
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(336, 38);
-            this.tb_name.TabIndex = 2;
-            // 
-            // tb_email
-            // 
-            this.tb_email.Location = new System.Drawing.Point(29, 468);
-            this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(336, 38);
-            this.tb_email.TabIndex = 3;
-            // 
-            // tb_role
-            // 
-            this.tb_role.Location = new System.Drawing.Point(29, 620);
-            this.tb_role.Name = "tb_role";
-            this.tb_role.Size = new System.Drawing.Size(336, 38);
-            this.tb_role.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 32);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 289);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 32);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Full Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 433);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 32);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Email";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 573);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 32);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Role";
-            // 
-            // bt_add
-            // 
-            this.bt_add.BackColor = System.Drawing.Color.Violet;
-            this.bt_add.Location = new System.Drawing.Point(29, 735);
-            this.bt_add.Name = "bt_add";
-            this.bt_add.Size = new System.Drawing.Size(148, 57);
-            this.bt_add.TabIndex = 9;
-            this.bt_add.Text = "Add";
-            this.bt_add.UseVisualStyleBackColor = false;
-            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
-            // 
-            // bt_remove
-            // 
-            this.bt_remove.BackColor = System.Drawing.Color.MediumPurple;
-            this.bt_remove.Location = new System.Drawing.Point(212, 735);
-            this.bt_remove.Name = "bt_remove";
-            this.bt_remove.Size = new System.Drawing.Size(148, 57);
-            this.bt_remove.TabIndex = 10;
-            this.bt_remove.Text = "Remove";
-            this.bt_remove.UseVisualStyleBackColor = false;
-            this.bt_remove.Click += new System.EventHandler(this.bt_remove_Click);
-            // 
             // Form_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1658, 1002);
+            this.Controls.Add(this.bt_load);
+            this.Controls.Add(this.bt_save);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_Phone);
             this.Controls.Add(this.bt_remove);
             this.Controls.Add(this.bt_add);
             this.Controls.Add(this.label4);
@@ -207,10 +262,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TextBox tb_email;
@@ -222,5 +273,14 @@
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.Button bt_remove;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_Phone;
+        private System.Windows.Forms.Button bt_save;
+        private System.Windows.Forms.Button bt_load;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
     }
 }
