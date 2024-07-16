@@ -8,11 +8,10 @@ namespace WindowsFormsApp2
 {
     public class Student
     {
-        int id;
-        string name;
-        string email;
-        string phone_num;
-
+        private int id;
+        private string name;
+        public string email;
+        public  string phone_num;
         public Student(int id, string name, string email, string phone_num)
         {
             this.id = id;
@@ -21,6 +20,17 @@ namespace WindowsFormsApp2
             this.phone_num = phone_num;
         }
 
+        public int Id
+        {
+            get { return  id; }
+            set { id = value; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         public string getInfo()
         {
             string info = id.ToString() + ", " + name + ", " + email + ", " + phone_num;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp2
 {
@@ -85,7 +86,25 @@ namespace WindowsFormsApp2
 
         private void bt_sort_Click(object sender, EventArgs e)
         {
+            if (cb_sort.Text == "name")
+            {
+                students = students.OrderBy(s => s.Name).ToList();
+            }
+            else if (cb_sort.Text == "id")
+            {
+                students = students.OrderBy(s => s.Id).ToList();
+            }
 
+            dataGridView1.Rows.Clear();
+            foreach (Student student in students)
+            {
+                string id = student.Id.ToString();   
+                string name = student.Name;
+                string email = student.email;
+                string phone = student.phone_num;
+                string[] newrow = {id, name, email, phone, "Student" };
+                dataGridView1.Rows.Add(newrow);
+            }
         }
     }
 }
