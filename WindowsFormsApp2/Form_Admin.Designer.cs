@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_email = new System.Windows.Forms.TextBox();
@@ -44,11 +49,8 @@
             this.tb_Phone = new System.Windows.Forms.TextBox();
             this.bt_save = new System.Windows.Forms.Button();
             this.bt_load = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bt_sort = new System.Windows.Forms.Button();
+            this.cb_sort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +72,41 @@
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1191, 954);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 12;
+            this.ID.Name = "ID";
+            this.ID.Width = 95;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Full Name";
+            this.FullName.MinimumWidth = 12;
+            this.FullName.Name = "FullName";
+            this.FullName.Width = 197;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 12;
+            this.Email.Name = "Email";
+            this.Email.Width = 140;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.MinimumWidth = 12;
+            this.Phone.Name = "Phone";
+            this.Phone.Width = 151;
+            // 
+            // Role
+            // 
+            this.Role.HeaderText = "Role";
+            this.Role.MinimumWidth = 12;
+            this.Role.Name = "Role";
+            this.Role.Width = 127;
             // 
             // tb_id
             // 
@@ -195,40 +232,27 @@
             this.bt_load.UseVisualStyleBackColor = false;
             this.bt_load.Click += new System.EventHandler(this.bt_load_Click);
             // 
-            // ID
+            // bt_sort
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 12;
-            this.ID.Name = "ID";
-            this.ID.Width = 95;
+            this.bt_sort.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.bt_sort.Location = new System.Drawing.Point(12, 888);
+            this.bt_sort.Name = "bt_sort";
+            this.bt_sort.Size = new System.Drawing.Size(180, 57);
+            this.bt_sort.TabIndex = 15;
+            this.bt_sort.Text = "Sort";
+            this.bt_sort.UseVisualStyleBackColor = false;
+            this.bt_sort.Click += new System.EventHandler(this.bt_sort_Click);
             // 
-            // FullName
+            // cb_sort
             // 
-            this.FullName.HeaderText = "Full Name";
-            this.FullName.MinimumWidth = 12;
-            this.FullName.Name = "FullName";
-            this.FullName.Width = 197;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 12;
-            this.Email.Name = "Email";
-            this.Email.Width = 140;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone";
-            this.Phone.MinimumWidth = 12;
-            this.Phone.Name = "Phone";
-            this.Phone.Width = 151;
-            // 
-            // Role
-            // 
-            this.Role.HeaderText = "Role";
-            this.Role.MinimumWidth = 12;
-            this.Role.Name = "Role";
-            this.Role.Width = 127;
+            this.cb_sort.FormattingEnabled = true;
+            this.cb_sort.Items.AddRange(new object[] {
+            "id",
+            "name"});
+            this.cb_sort.Location = new System.Drawing.Point(215, 893);
+            this.cb_sort.Name = "cb_sort";
+            this.cb_sort.Size = new System.Drawing.Size(180, 39);
+            this.cb_sort.TabIndex = 16;
             // 
             // Form_Admin
             // 
@@ -236,6 +260,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1658, 1002);
+            this.Controls.Add(this.cb_sort);
+            this.Controls.Add(this.bt_sort);
             this.Controls.Add(this.bt_load);
             this.Controls.Add(this.bt_save);
             this.Controls.Add(this.label5);
@@ -282,5 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.Button bt_sort;
+        private System.Windows.Forms.ComboBox cb_sort;
     }
 }

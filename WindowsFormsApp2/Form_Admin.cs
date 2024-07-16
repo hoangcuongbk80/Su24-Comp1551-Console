@@ -66,7 +66,8 @@ namespace WindowsFormsApp2
             StreamReader reader = new StreamReader("student.txt");
             
             string line = reader.ReadLine();
-            int count = 0;
+            dataGridView1.Rows.Clear();
+            students.Clear();
             while(line != null)
             {
                 string[] parts = line.Split(',');
@@ -74,13 +75,17 @@ namespace WindowsFormsApp2
                 string name = parts[1];
                 string email = parts[2];
                 string phone = parts[3];
-                if (count < 3)
-                {
-                    dataGridView1.Rows.Add(id, name, email, phone, "Student");
-                    Student newStu = new Student(id, name, email, phone);
-                    students.Add(newStu);
-                }
+                dataGridView1.Rows.Add(id, name, email, phone, "Student");
+                Student newStu = new Student(id, name, email, phone);
+                students.Add(newStu);
+                line = reader.ReadLine();
             }
+            reader.Close();
+        }
+
+        private void bt_sort_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
