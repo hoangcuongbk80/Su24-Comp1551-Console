@@ -41,6 +41,8 @@
             this.cb_role = new System.Windows.Forms.ComboBox();
             this.tb_salary = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1373, 773);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // bt_connect
             // 
@@ -69,7 +72,7 @@
             // bt_add
             // 
             this.bt_add.BackColor = System.Drawing.Color.Yellow;
-            this.bt_add.Location = new System.Drawing.Point(26, 618);
+            this.bt_add.Location = new System.Drawing.Point(28, 665);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(232, 56);
             this.bt_add.TabIndex = 2;
@@ -80,7 +83,7 @@
             // bt_modify
             // 
             this.bt_modify.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.bt_modify.Location = new System.Drawing.Point(26, 719);
+            this.bt_modify.Location = new System.Drawing.Point(28, 766);
             this.bt_modify.Name = "bt_modify";
             this.bt_modify.Size = new System.Drawing.Size(232, 53);
             this.bt_modify.TabIndex = 3;
@@ -91,7 +94,7 @@
             // bt_remove
             // 
             this.bt_remove.BackColor = System.Drawing.Color.LightSalmon;
-            this.bt_remove.Location = new System.Drawing.Point(26, 807);
+            this.bt_remove.Location = new System.Drawing.Point(28, 854);
             this.bt_remove.Name = "bt_remove";
             this.bt_remove.Size = new System.Drawing.Size(232, 64);
             this.bt_remove.TabIndex = 4;
@@ -102,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 464);
+            this.label4.Location = new System.Drawing.Point(28, 511);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 32);
             this.label4.TabIndex = 17;
@@ -111,7 +114,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 355);
+            this.label3.Location = new System.Drawing.Point(34, 402);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 32);
             this.label3.TabIndex = 16;
@@ -120,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 246);
+            this.label2.Location = new System.Drawing.Point(22, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 32);
             this.label2.TabIndex = 15;
@@ -129,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 153);
+            this.label1.Location = new System.Drawing.Point(28, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 32);
             this.label1.TabIndex = 14;
@@ -137,7 +140,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(26, 499);
+            this.dateTimePicker1.Location = new System.Drawing.Point(28, 546);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(270, 38);
             this.dateTimePicker1.TabIndex = 13;
@@ -150,30 +153,48 @@
             "Associate",
             "Admin",
             "Intern"});
-            this.cb_role.Location = new System.Drawing.Point(26, 390);
+            this.cb_role.Location = new System.Drawing.Point(28, 437);
             this.cb_role.Name = "cb_role";
             this.cb_role.Size = new System.Drawing.Size(270, 39);
             this.cb_role.TabIndex = 12;
             // 
             // tb_salary
             // 
-            this.tb_salary.Location = new System.Drawing.Point(26, 281);
+            this.tb_salary.Location = new System.Drawing.Point(28, 328);
             this.tb_salary.Name = "tb_salary";
             this.tb_salary.Size = new System.Drawing.Size(270, 38);
             this.tb_salary.TabIndex = 11;
             // 
             // tb_name
             // 
-            this.tb_name.Location = new System.Drawing.Point(26, 188);
+            this.tb_name.Location = new System.Drawing.Point(28, 235);
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(270, 38);
             this.tb_name.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 94);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 32);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Id";
+            // 
+            // tb_id
+            // 
+            this.tb_id.Location = new System.Drawing.Point(28, 129);
+            this.tb_id.Name = "tb_id";
+            this.tb_id.Size = new System.Drawing.Size(270, 38);
+            this.tb_id.TabIndex = 18;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1722, 957);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -210,5 +231,7 @@
         private System.Windows.Forms.ComboBox cb_role;
         private System.Windows.Forms.TextBox tb_salary;
         private System.Windows.Forms.TextBox tb_name;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_id;
     }
 }

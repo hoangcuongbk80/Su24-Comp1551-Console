@@ -18,6 +18,30 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            // Check if a row is selected
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the selected row
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Extract data from the selected row and populate textboxes
+                tb_id.Text = selectedRow.Cells["Id"].Value.ToString();
+                tb_name.Text = selectedRow.Cells["Name"].Value.ToString();
+                tb_salary.Text = selectedRow.Cells["Salary"].Value.ToString();
+                cb_role.Text = selectedRow.Cells["Role"].Value.ToString();
+            }
+            else
+            {
+                // Clear textboxes if no row is selected
+                tb_id.Text = "";
+                tb_name.Text = "";
+                tb_salary.Text = "";
+                cb_role.Text = "";
+            }
+        }
+
         private void bt_connect_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp3\Database1.mdf;Integrated Security=True";
@@ -42,23 +66,25 @@ namespace WindowsFormsApp3
 
         private void bt_add_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(tb_id.Text);
             string name = tb_name.Text;
             int salary = Convert.ToInt32(tb_salary.Text);
             string role = cb_role.Text;
             DateTime dateTime = DateTime.Parse(dateTimePicker1.Text);
 
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Code\Database_FGW\Database_FGW\Database1.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp3\Database1.mdf;Integrated Security=True";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO Employee (Name, Salary, Role, StartDate) VALUES (@Name, @Salary, @Role, @StartDate)";
+                    string query = "INSERT INTO Employee (Id, Name, Salary, Role, Date) VALUES (@Id, @Name, @Salary, @Role, @Date)";
                     SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Id", id);
                     command.Parameters.AddWithValue("@Name", name);
                     command.Parameters.AddWithValue("@Salary", salary);
                     command.Parameters.AddWithValue("@Role", role);
-                    command.Parameters.AddWithValue("@StartDate", dateTime);
+                    command.Parameters.AddWithValue("@Date", dateTime);
                     command.ExecuteNonQuery();
                 }
             }
@@ -76,24 +102,27 @@ namespace WindowsFormsApp3
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
+                int id = Convert.ToInt32(tb_id.Text);
                 string name = tb_name.Text; //selectedRow.Cells["Name"].Value.ToString();
                 int salary = Convert.ToInt32(tb_salary.Text); //Convert.ToInt32(selectedRow.Cells["Salary"].Value);
                 string role = cb_role.Text; //selectedRow.Cells["Role"].Value.ToString();
                 DateTime date = DateTime.Now;
 
-                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Code\Database_FGW\Database_FGW\Database1.mdf;Integrated Security=True";
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp3\Database1.mdf;Integrated Security=True";
+
 
                 try
                 {
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
-                        string query = "UPDATE Employee SET Salary = @Salary, Role = @Role, StartDate = @StartDate WHERE Name = @Name";
+                        string query = "UPDATE Employee SET Name = @Name, Salary = @Salary, Role = @Role, Date = @Date WHERE Id = @Id";
                         SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Id", id);
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Salary", salary);
                         command.Parameters.AddWithValue("@Role", role);
-                        command.Parameters.AddWithValue("@StartDate", date); // Use the correct parameter
+                        command.Parameters.AddWithValue("@Date", date); // Use the correct parameter
                         command.ExecuteNonQuery();
                     }
                 }
@@ -116,7 +145,7 @@ namespace WindowsFormsApp3
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                 string Name = Convert.ToString(selectedRow.Cells["Name"].Value);
-                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Code\Database_FGW\Database_FGW\Database1.mdf;Integrated Security=True";
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\FGW\Courses\COMP1551-ApplicationDevelopment\Su24-CO1103\code\Su24-Comp1551-Console\WindowsFormsApp3\Database1.mdf;Integrated Security=True";
 
                 try
                 {
