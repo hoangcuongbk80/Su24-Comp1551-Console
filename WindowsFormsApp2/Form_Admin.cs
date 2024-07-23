@@ -101,7 +101,7 @@ namespace WindowsFormsApp2
                 string id = student.Id.ToString();   
                 string name = student.Name;
                 string email = student.email;
-                string phone = student.phone_num;
+                string phone = student.PhoneNumber;
                 string[] newrow = {id, name, email, phone, "Student" };
                 dataGridView1.Rows.Add(newrow);
             }
