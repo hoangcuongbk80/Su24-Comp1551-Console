@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    public class Student
+    public class Student : Person
     {
         private int id;
-        private string name;
         public string email;
-        public  string phone_num;
-        public Student(int id, string name, string email, string phone_num)
+        public Student(int id, string name, string email, string phone_num) : base(name, phone_num)
         {
             this.id = id;
-            this.name = name;
             this.email = email;
-            this.phone_num = phone_num;
         }
 
         public int Id
@@ -26,15 +22,15 @@ namespace WindowsFormsApp2
             set { id = value; }
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
         public string getInfo()
         {
-            string info = id.ToString() + ", " + name + ", " + email + ", " + phone_num;
+            string info = id.ToString() + ", " + Name + ", " + email + ", " + PhoneNumber;
             return info;
+        }
+
+        public override string ToString()
+        {
+            return id + " " + base.ToString() + " " + email;
         }
     }
 }
